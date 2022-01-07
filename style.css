@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.heroAnim {
+  /* overflow-y: hidden; */
+  /* overflow-x: hidden; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100vw * 0.5625);
+  max-height: calc(100vw * 0.5625);
+  /* height: 100vh;
+    max-height: 100vh; */
+  width: 100%;
+  max-width: 100%;
+  /* text-align: center; */
+  /* FONDO */
+  /* FIN FONDO */
+  /* BICHO HEAD */
+  /* FIN BICHO HEAD */
+  /* BICHO HANDS */
+  /* FIN BICHO HANDS */
+  /* HOST HEAD */
+  /* FIN HOST HEAD */
+}
+
+@-webkit-keyframes heroBG {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -80%;
+  }
+}
+
+@keyframes heroBG {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -80%;
+  }
+}
+
+.heroAnim .heroBG {
+  position: absolute;
+  height: 200%;
+  width: 100%;
+  /* background-image: url("/img/bg.jpg"); */
+  -webkit-animation-name: heroBG;
+          animation-name: heroBG;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 1;
+}
+
+.heroAnim .heroBG img {
+  width: 100%;
+  height: auto;
+}
+
+@-webkit-keyframes bichoHead {
+  0% {
+    bottom: -140%;
+    -webkit-filter: brightness(0%);
+            filter: brightness(0%);
+  }
+  75% {
+    -webkit-filter: brightness(15%);
+            filter: brightness(15%);
+  }
+  100% {
+    bottom: -20%;
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+}
+
+@keyframes bichoHead {
+  0% {
+    bottom: -140%;
+    -webkit-filter: brightness(0%);
+            filter: brightness(0%);
+  }
+  75% {
+    -webkit-filter: brightness(15%);
+            filter: brightness(15%);
+  }
+  100% {
+    bottom: -20%;
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+}
+
+.heroAnim .bichoHead {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: bichoHead;
+          animation-name: bichoHead;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+.heroAnim .bichoHead img {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@-webkit-keyframes bichoHands {
+  0% {
+    bottom: -180%;
+    -webkit-filter: brightness(0%);
+            filter: brightness(0%);
+  }
+  75% {
+    -webkit-filter: brightness(15%);
+            filter: brightness(15%);
+  }
+  100% {
+    bottom: -20%;
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+}
+
+@keyframes bichoHands {
+  0% {
+    bottom: -180%;
+    -webkit-filter: brightness(0%);
+            filter: brightness(0%);
+  }
+  75% {
+    -webkit-filter: brightness(15%);
+            filter: brightness(15%);
+  }
+  100% {
+    bottom: -20%;
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+}
+
+.heroAnim .bichoHands {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: bichoHands;
+          animation-name: bichoHands;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+.heroAnim .bichoHands img {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@-webkit-keyframes heroHost {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: -23%;
+  }
+}
+
+@keyframes heroHost {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: -23%;
+  }
+}
+
+.heroAnim .heroHost {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: heroHost;
+          animation-name: heroHost;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 3;
+}
+
+.heroAnim .heroHost img {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.pageContent {
+  position: absolute;
+  top: calc(100vw * 0.5625);
+  z-index: 999;
+  background: black;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

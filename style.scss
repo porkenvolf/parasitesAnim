@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.heroAnim{
+    /* overflow-y: hidden; */
+    /* overflow-x: hidden; */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: calc(100vw * 0.5625);
+    max-height: calc(100vw * 0.5625);
+
+
+    /* height: 100vh;
+    max-height: 100vh; */
+    width: 100%;
+    max-width: 100%;
+    
+    /* text-align: center; */
+
+
+    /* FONDO */
+    @keyframes  heroBG{
+        0% {top:0}
+        100% {top: -80%;}
+    }
+    .heroBG{
+        position: absolute;
+        height: 200%;
+        width: 100%;
+        /* background-image: url("/img/bg.jpg"); */
+        animation-name: heroBG;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        z-index: 1;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    } /* FIN FONDO */
+
+
+    /* BICHO HEAD */
+    @keyframes  bichoHead{
+        0% {bottom:-140%; filter: brightness(0%)}
+        75% { filter: brightness(15%)}
+        100% {bottom: -20%; filter: brightness(100%)}    //esta unidad deberia depender de vw, ajustar
+    }
+    .bichoHead{
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        animation-name: bichoHead;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        z-index: 2;
+
+        img{
+            position: absolute;
+            bottom: 0;
+            width: 80%;         //esta unidad deberia depender de vw, ajustar
+            height: auto;
+
+            //centrar
+            left: 50%;
+            transform: translateX(-50%)
+        }
+    } /* FIN BICHO HEAD */
+
+
+
+    /* BICHO HANDS */
+    @keyframes  bichoHands{
+        0% {bottom:-180%; filter: brightness(0%)}
+        75% { filter: brightness(15%)}
+        100% {bottom: -20%; filter: brightness(100%)}    //esta unidad deberia depender de vw, ajustar
+    }
+    .bichoHands{
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        animation-name: bichoHands;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        z-index: 2;
+
+        img{
+            position: absolute;
+            bottom: 0;
+            width: 80%;         //esta unidad deberia depender de vw, ajustar
+            height: auto;
+
+            //centrar
+            left: 50%;
+            transform: translateX(-50%)
+        }
+    } /* FIN BICHO HANDS */
+
+    /* HOST HEAD */
+    @keyframes  heroHost{
+        0% {bottom:0%}
+        100% {bottom: -23%;}    //esta unidad deberia depender de vw, ajustar
+    }
+    .heroHost{
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        animation-name: heroHost;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        z-index: 3;
+
+        img{
+            position: absolute;
+            bottom: 0;
+            width: 80%;         //esta unidad deberia depender de vw, ajustar
+            height: auto;
+
+            //centrar
+            left: 50%;
+            transform: translateX(-50%)
+        }
+    } /* FIN HOST HEAD */
+
+
+
+
+}
+.pageContent{
+    position: absolute;
+    
+    top: calc(100vw * 0.5625);
+    z-index: 999;
+    background: black;
+    width: 100%;
+    height: 100%;
+}
