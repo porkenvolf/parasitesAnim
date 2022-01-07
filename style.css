@@ -73,6 +73,11 @@
     -webkit-filter: brightness(0%);
             filter: brightness(0%);
   }
+  15% {
+    bottom: -140%;
+    -webkit-filter: brightness(0%);
+            filter: brightness(0%);
+  }
   75% {
     -webkit-filter: brightness(15%);
             filter: brightness(15%);
@@ -86,6 +91,11 @@
 
 @keyframes bichoHead {
   0% {
+    bottom: -140%;
+    -webkit-filter: brightness(0%);
+            filter: brightness(0%);
+  }
+  15% {
     bottom: -140%;
     -webkit-filter: brightness(0%);
             filter: brightness(0%);
@@ -130,7 +140,12 @@
     -webkit-filter: brightness(0%);
             filter: brightness(0%);
   }
-  75% {
+  15% {
+    bottom: -180%;
+    -webkit-filter: brightness(0%);
+            filter: brightness(0%);
+  }
+  65% {
     -webkit-filter: brightness(15%);
             filter: brightness(15%);
   }
@@ -147,7 +162,12 @@
     -webkit-filter: brightness(0%);
             filter: brightness(0%);
   }
-  75% {
+  15% {
+    bottom: -180%;
+    -webkit-filter: brightness(0%);
+            filter: brightness(0%);
+  }
+  65% {
     -webkit-filter: brightness(15%);
             filter: brightness(15%);
   }
@@ -185,6 +205,9 @@
   0% {
     bottom: 0%;
   }
+  15% {
+    bottom: 0%;
+  }
   100% {
     bottom: -23%;
   }
@@ -192,6 +215,9 @@
 
 @keyframes heroHost {
   0% {
+    bottom: 0%;
+  }
+  15% {
     bottom: 0%;
   }
   100% {
