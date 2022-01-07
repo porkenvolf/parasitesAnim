@@ -1,18 +1,22 @@
 *{
     margin: 0;
     padding: 0;
+    
+}
+:root{
+    --animHeight: calc(100vw * 0.51);
 }
 
 
 .heroAnim{
-    /* overflow-y: hidden; */
-    /* overflow-x: hidden; */
+    overflow-y: hidden;
+    overflow-x: hidden;
     position: absolute;
     top: 0;
     left: 0;
 
-    height: calc(100vw * 0.5625);
-    max-height: calc(100vw * 0.5625);
+    height: var(--animHeight);
+    max-height: var(--animHeight);
 
 
     /* height: 100vh;
@@ -26,7 +30,7 @@
     /* FONDO */
     @keyframes  heroBG{
         0% {top:0}
-        100% {top: -80%;}
+        100% {top: -90%;}
     }
     .heroBG{
         position: absolute;
@@ -49,7 +53,7 @@
     @keyframes  bichoHead{
         0% {bottom:-140%; filter: brightness(0%)}
         75% { filter: brightness(15%)}
-        100% {bottom: -20%; filter: brightness(100%)}    //esta unidad deberia depender de vw, ajustar
+        100% {bottom: -20%; filter: brightness(100%)}    
     }
     .bichoHead{
         position: absolute;
@@ -63,7 +67,7 @@
         img{
             position: absolute;
             bottom: 0;
-            width: 80%;         //esta unidad deberia depender de vw, ajustar
+            width: 80%;         
             height: auto;
 
             //centrar
@@ -78,7 +82,7 @@
     @keyframes  bichoHands{
         0% {bottom:-180%; filter: brightness(0%)}
         75% { filter: brightness(15%)}
-        100% {bottom: -20%; filter: brightness(100%)}    //esta unidad deberia depender de vw, ajustar
+        100% {bottom: -20%; filter: brightness(100%)}    
     }
     .bichoHands{
         position: absolute;
@@ -92,7 +96,7 @@
         img{
             position: absolute;
             bottom: 0;
-            width: 80%;         //esta unidad deberia depender de vw, ajustar
+            width: 80%;         
             height: auto;
 
             //centrar
@@ -134,7 +138,7 @@
 .pageContent{
     position: absolute;
     
-    top: calc(100vw * 0.5625);
+    top: var(--animHeight);
     z-index: 999;
     background: black;
     width: 100%;

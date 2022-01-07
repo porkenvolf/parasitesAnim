@@ -3,14 +3,18 @@
   padding: 0;
 }
 
+:root {
+  --animHeight: calc(100vw * 0.51);
+}
+
 .heroAnim {
-  /* overflow-y: hidden; */
-  /* overflow-x: hidden; */
+  overflow-y: hidden;
+  overflow-x: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  height: calc(100vw * 0.5625);
-  max-height: calc(100vw * 0.5625);
+  height: var(--animHeight);
+  max-height: var(--animHeight);
   /* height: 100vh;
     max-height: 100vh; */
   width: 100%;
@@ -31,7 +35,7 @@
     top: 0;
   }
   100% {
-    top: -80%;
+    top: -90%;
   }
 }
 
@@ -40,7 +44,7 @@
     top: 0;
   }
   100% {
-    top: -80%;
+    top: -90%;
   }
 }
 
@@ -220,7 +224,7 @@
 
 .pageContent {
   position: absolute;
-  top: calc(100vw * 0.5625);
+  top: var(--animHeight);
   z-index: 999;
   background: black;
   width: 100%;
