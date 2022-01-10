@@ -1,0 +1,58 @@
+<!-- This is a solution for a question on stackoverflow -->
+<!-- https://stackoverflow.com/questions/52892889/pause-resume-css-animations-when-switching-tabs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animation</title>
+	<style type="text/css">
+		div#test {
+		  width: 50px;
+		  height: 50px;
+		  background-color: red;
+		  position: absolute;
+		  left: 10vw;
+		  animation-name: move;
+		  animation-duration: 5s;
+		  animation-fill-mode: forwards;
+		  animation-timing-function: linear;
+		  /* add the state here and set it to running on window load */
+		  animation-play-state: paused !important;
+         -webkit-animation-play-state: paused !important;
+            -moz-animation-play-state: paused !important;
+		}
+
+		@keyframes move {
+		  to {
+		    left: 90vw
+		  }
+		}
+	</style>
+</head>
+<body>
+
+<div id="test"></div>
+<script type="text/javascript">
+	/* window.onload = function() {
+		// not mentioning the state at all does not provide the expected result, so you need to set 
+		// the state to paused and set it to running on window load
+		document.getElementById('test').style.WebkitAnimationPlayState = "paused";
+  		document.getElementById('test').style.animationPlayState = 'paused';
+	} */
+
+	/* window.onblur = function(){
+	  	document.title = 'paused now';
+	  	document.getElementById('test').style.WebkitAnimationPlayState = "paused";
+	  	document.getElementById('test').style.animationPlayState = 'paused';
+	  	document.getElementById('test').style.background = 'pink'; // for testing
+	} */
+
+	window.onfocus = function(){ 
+	  	document.title = 'running now';
+	    document.getElementById('test').style.WebkitAnimationPlayState = "running";
+	  	document.getElementById('test').style.animationPlayState = 'running';
+	  	document.getElementById('test').style.background = 'red'; // for testing
+	}
+</script>
+</body>
+</html>

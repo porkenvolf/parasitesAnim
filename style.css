@@ -30,24 +30,6 @@
   /* FIN HOST HEAD */
 }
 
-@-webkit-keyframes heroBG {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -90%;
-  }
-}
-
-@keyframes heroBG {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -90%;
-  }
-}
-
 .heroAnim .heroBG {
   position: absolute;
   height: 200%;
@@ -65,6 +47,99 @@
 .heroAnim .heroBG img {
   width: 100%;
   height: auto;
+}
+
+.heroAnim .bichoHead {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: bichoHead;
+          animation-name: bichoHead;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+.heroAnim .bichoHead img {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.heroAnim .bichoHands {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: bichoHands;
+          animation-name: bichoHands;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+.heroAnim .bichoHands img {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.heroAnim .heroHost {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: heroHost;
+          animation-name: heroHost;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 3;
+}
+
+.heroAnim .heroHost img {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.heroAnim .paused {
+  animation-play-state: paused !important;
+  -webkit-animation-play-state: paused !important;
+  -moz-animation-play-state: paused !important;
+}
+
+@-webkit-keyframes heroBG {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -90%;
+  }
+}
+
+@keyframes heroBG {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -90%;
+  }
 }
 
 @-webkit-keyframes bichoHead {
@@ -111,29 +186,6 @@
   }
 }
 
-.heroAnim .bichoHead {
-  position: absolute;
-  width: 100%;
-  max-width: 100%;
-  -webkit-animation-name: bichoHead;
-          animation-name: bichoHead;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  z-index: 2;
-}
-
-.heroAnim .bichoHead img {
-  position: absolute;
-  bottom: 0;
-  width: 80%;
-  height: auto;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
 @-webkit-keyframes bichoHands {
   0% {
     bottom: -180%;
@@ -178,29 +230,6 @@
   }
 }
 
-.heroAnim .bichoHands {
-  position: absolute;
-  width: 100%;
-  max-width: 100%;
-  -webkit-animation-name: bichoHands;
-          animation-name: bichoHands;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  z-index: 2;
-}
-
-.heroAnim .bichoHands img {
-  position: absolute;
-  bottom: 0;
-  width: 80%;
-  height: auto;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
 @-webkit-keyframes heroHost {
   0% {
     bottom: 0%;
@@ -223,29 +252,6 @@
   100% {
     bottom: -23%;
   }
-}
-
-.heroAnim .heroHost {
-  position: absolute;
-  width: 100%;
-  max-width: 100%;
-  -webkit-animation-name: heroHost;
-          animation-name: heroHost;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  z-index: 3;
-}
-
-.heroAnim .heroHost img {
-  position: absolute;
-  bottom: 0;
-  width: 80%;
-  height: auto;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .pageContent {

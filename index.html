@@ -6,14 +6,23 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <link rel="stylesheet" href="style.css">
+
+        
     </head>
 
     <body>
+        
+
+
+
+
+
         <div class="heroAnim">
-            <div class="heroBG"><img src="img/bg.jpg" alt=""></div>
-            <div class="bichoHands"><img src="img/bichoManos.png" alt=""></div>
-            <div class="bichoHead"><img src="img/bichoHead.png" alt=""></div>
-            <div class="heroHost"><img src="img/Head.png" alt=""></div>
+            
+            <div id="heroBG" class="heroBG paused"><img src="img/bg.jpg" alt=""></div>
+            <div id="bichoHands" class="bichoHands paused"><img src="img/bichoManos.png" alt=""></div>
+            <div id="bichoHead" class="bichoHead paused"><img src="img/bichoHead.png" alt=""></div>
+            <div id="heroHost" class="heroHost paused"><img src="img/Head.png" alt=""></div>
             
 
 
@@ -27,6 +36,69 @@
             <br><br><br><br><br>
             dsadsadsa
         </div>
+
+
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script>
+            // Set the name of the hidden property and the change event for visibility
+            var hidden, visibilityChange;
+            if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+                hidden = "hidden";
+                visibilityChange = "visibilitychange";
+                state = "visibilityState";
+            } else if (typeof document.mozHidden !== "undefined") {
+                hidden = "mozHidden";
+                visibilityChange = "mozvisibilitychange";
+                state = "mozVisibilityState";
+            } else if (typeof document.msHidden !== "undefined") {
+                hidden = "msHidden";
+                visibilityChange = "msvisibilitychange";
+                state = "msVisibilityState";
+            } else if (typeof document.webkitHidden !== "undefined") {
+                hidden = "webkitHidden";
+                visibilityChange = "webkitvisibilitychange";
+                state = "webkitVisibilityState";
+            }
+
+            if (document[hidden] == true){
+                
+                $('#heroBG').addClass('paused');
+                $('#bichoHands').addClass('paused');
+                $('#bichoHead').addClass('paused');
+                $('#heroHost').addClass('paused');
+                      
+            } else if (document[hidden] == false){
+                $('#heroBG').removeClass('paused');
+                $('#bichoHands').removeClass('paused');
+                $('#bichoHead').removeClass('paused');
+                $('#heroHost').removeClass('paused');
+                
+            }
+
+
+            document.addEventListener(visibilityChange, function() {
+
+            console.log(document[hidden]);
+
+            if (document[hidden] == true){
+                
+                $('#heroBG').addClass('paused');
+                $('#bichoHands').addClass('paused');
+                $('#bichoHead').addClass('paused');
+                $('#heroHost').addClass('paused');
+                      
+            } else if (document[hidden] == false){
+                $('#heroBG').removeClass('paused');
+                $('#bichoHands').removeClass('paused');
+                $('#bichoHead').removeClass('paused');
+                $('#heroHost').removeClass('paused');
+                
+            }
+            });
+
+        </script>
+        
+
 
 
 
