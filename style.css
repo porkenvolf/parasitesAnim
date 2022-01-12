@@ -3,8 +3,38 @@
   padding: 0;
 }
 
+@media screen and (min-aspect-ratio: 16 / 18) {
+  :root {
+    --bgHeight: calc(100vw * 1.125);
+    --bgScroll: calc(100vh - var(--bgHeight));
+    --bgScroll2: min(var(--bgScroll), -1*var(--bgScroll));
+    --headScroll:calc(var(--bgHeight) * (-0.105));
+    --paraScroll: calc(var(--bgHeight) * (0.71));
+    --logoBigScroll: calc(-70%);
+    --paraBreate: 1.5%;
+  }
+}
+
+@media screen and (max-aspect-ratio: 16 / 18) {
+  :root {
+    --bgHeight: calc(100vh * 1.5);
+    --bgScroll: calc(110vh - var(--bgHeight));
+    --bgScroll2: min(var(--bgScroll), -1*var(--bgScroll));
+    --headScroll:calc(100vw * (-0.12));
+    --paraScroll: calc(100vw * (0.7));
+    --logoBigScroll: -30%;
+    --paraBreate: 10px;
+  }
+}
+
+@media screen and (min-aspect-ratio: 16 / 18) and (max-aspect-ratio: 22 / 18) {
+  :root {
+    --logoBigScroll: calc(100vw * (-0.3));
+  }
+}
+
 :root {
-  --animHeight: calc(100vw * 0.51);
+  --animHeight: 100vh;
 }
 
 .heroAnim {
@@ -32,8 +62,6 @@
 
 .heroAnim .heroBG {
   position: absolute;
-  height: 200%;
-  width: 100%;
   /* background-image: url("/img/bg.jpg"); */
   -webkit-animation-name: heroBG;
           animation-name: heroBG;
@@ -45,8 +73,10 @@
 }
 
 .heroAnim .heroBG img {
-  width: 100%;
-  height: auto;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .heroAnim .bichoHead {
@@ -64,9 +94,6 @@
 
 .heroAnim .bichoHead img {
   position: absolute;
-  bottom: 0;
-  width: 80%;
-  height: auto;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -87,9 +114,6 @@
 
 .heroAnim .bichoHands img {
   position: absolute;
-  bottom: 0;
-  width: 80%;
-  height: auto;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -111,11 +135,150 @@
 .heroAnim .heroHost img {
   position: absolute;
   bottom: 0;
-  width: 80%;
-  height: auto;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.heroAnim .blackIntro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  z-index: 998;
+  -webkit-animation-name: blackIntro;
+          animation-name: blackIntro;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.heroAnim .logoBig {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  -webkit-animation-name: logoBig;
+          animation-name: logoBig;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 999;
+}
+
+.heroAnim .logoBig img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.heroAnim .paraHeadBreathe {
+  position: absolute;
+  -webkit-animation-name: paraHeadBreathe;
+          animation-name: paraHeadBreathe;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.heroAnim .paraHandsBreathe {
+  position: absolute;
+  -webkit-animation-name: paraHeadBreathe;
+          animation-name: paraHeadBreathe;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.heroAnim .ray1 {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: ray1;
+          animation-name: ray1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  z-index: 1;
+}
+
+.heroAnim .ray1_2 {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: ray1_2;
+          animation-name: ray1_2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  z-index: 1;
+}
+
+.heroAnim .ray2 {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: ray2;
+          animation-name: ray2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  z-index: 1;
+}
+
+.heroAnim .ray2_2 {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: ray2_2;
+          animation-name: ray2_2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  z-index: 1;
+}
+
+.heroAnim .bright {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: bright;
+          animation-name: bright;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  z-index: 1;
+  top: 50%;
 }
 
 .heroAnim .paused {
@@ -124,41 +287,285 @@
   -moz-animation-play-state: paused !important;
 }
 
-@-webkit-keyframes heroBG {
+@-webkit-keyframes bright {
   0% {
-    top: 0;
+    -webkit-filter: opacity(100%);
+            filter: opacity(100%);
+  }
+  50% {
+    -webkit-filter: opacity(0%);
+            filter: opacity(0%);
   }
   100% {
-    top: -90%;
+    -webkit-filter: opacity(100%);
+            filter: opacity(100%);
+  }
+}
+
+@keyframes bright {
+  0% {
+    -webkit-filter: opacity(100%);
+            filter: opacity(100%);
+  }
+  50% {
+    -webkit-filter: opacity(0%);
+            filter: opacity(0%);
+  }
+  100% {
+    -webkit-filter: opacity(100%);
+            filter: opacity(100%);
+  }
+}
+
+@-webkit-keyframes ray2 {
+  0% {
+    right: 0%;
+    -webkit-filter: opacity(80%);
+            filter: opacity(80%);
+  }
+  50% {
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+  100% {
+    right: 100%;
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+}
+
+@keyframes ray2 {
+  0% {
+    right: 0%;
+    -webkit-filter: opacity(80%);
+            filter: opacity(80%);
+  }
+  50% {
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+  100% {
+    right: 100%;
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+}
+
+@-webkit-keyframes ray2_2 {
+  0% {
+    right: -100%;
+    -webkit-filter: opacity(80%);
+            filter: opacity(80%);
+  }
+  50% {
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+  100% {
+    right: 0%;
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+}
+
+@keyframes ray2_2 {
+  0% {
+    right: -100%;
+    -webkit-filter: opacity(80%);
+            filter: opacity(80%);
+  }
+  50% {
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+  100% {
+    right: 0%;
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+}
+
+@-webkit-keyframes ray1 {
+  0% {
+    left: 0%;
+    -webkit-filter: opacity(80%);
+            filter: opacity(80%);
+  }
+  50% {
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+  100% {
+    left: 100%;
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+}
+
+@keyframes ray1 {
+  0% {
+    left: 0%;
+    -webkit-filter: opacity(80%);
+            filter: opacity(80%);
+  }
+  50% {
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+  100% {
+    left: 100%;
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+}
+
+@-webkit-keyframes ray1_2 {
+  0% {
+    left: -100%;
+    -webkit-filter: opacity(80%);
+            filter: opacity(80%);
+  }
+  50% {
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+  100% {
+    left: 0%;
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+}
+
+@keyframes ray1_2 {
+  0% {
+    left: -100%;
+    -webkit-filter: opacity(80%);
+            filter: opacity(80%);
+  }
+  50% {
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+  100% {
+    left: 0%;
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+}
+
+@-webkit-keyframes paraHeadBreathe {
+  0% {
+    top: var(--paraBreate);
+  }
+  50% {
+    top: calc(var(--paraBreate) * (-1));
+  }
+  100% {
+    top: var(--paraBreate);
+  }
+}
+
+@keyframes paraHeadBreathe {
+  0% {
+    top: var(--paraBreate);
+  }
+  50% {
+    top: calc(var(--paraBreate) * (-1));
+  }
+  100% {
+    top: var(--paraBreate);
+  }
+}
+
+@-webkit-keyframes logoBig {
+  0% {
+    top: 0%;
+  }
+  30% {
+    top: 0%;
+  }
+  100% {
+    top: var(--logoBigScroll);
+  }
+}
+
+@keyframes logoBig {
+  0% {
+    top: 0%;
+  }
+  30% {
+    top: 0%;
+  }
+  100% {
+    top: var(--logoBigScroll);
+  }
+}
+
+@-webkit-keyframes blackIntro {
+  0% {
+    -webkit-filter: opacity(100%);
+            filter: opacity(100%);
+  }
+  30% {
+    -webkit-filter: opacity(100%);
+            filter: opacity(100%);
+  }
+  100% {
+    -webkit-filter: opacity(0%);
+            filter: opacity(0%);
+  }
+}
+
+@keyframes blackIntro {
+  0% {
+    -webkit-filter: opacity(100%);
+            filter: opacity(100%);
+  }
+  30% {
+    -webkit-filter: opacity(100%);
+            filter: opacity(100%);
+  }
+  100% {
+    -webkit-filter: opacity(0%);
+            filter: opacity(0%);
+  }
+}
+
+@-webkit-keyframes heroBG {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: var(--bgScroll2);
   }
 }
 
 @keyframes heroBG {
   0% {
-    top: 0;
+    top: 0%;
   }
   100% {
-    top: -90%;
+    top: var(--bgScroll2);
   }
 }
 
 @-webkit-keyframes bichoHead {
   0% {
-    bottom: -140%;
+    bottom: 5%;
     -webkit-filter: brightness(0%);
             filter: brightness(0%);
   }
-  15% {
-    bottom: -140%;
-    -webkit-filter: brightness(0%);
-            filter: brightness(0%);
+  55% {
+    bottom: 5%;
+    -webkit-filter: brightness(10%);
+            filter: brightness(10%);
   }
   75% {
     -webkit-filter: brightness(15%);
             filter: brightness(15%);
   }
   100% {
-    bottom: -20%;
+    bottom: calc(var(--paraScroll)*1.05);
     -webkit-filter: brightness(100%);
             filter: brightness(100%);
   }
@@ -166,21 +573,21 @@
 
 @keyframes bichoHead {
   0% {
-    bottom: -140%;
+    bottom: 5%;
     -webkit-filter: brightness(0%);
             filter: brightness(0%);
   }
-  15% {
-    bottom: -140%;
-    -webkit-filter: brightness(0%);
-            filter: brightness(0%);
+  55% {
+    bottom: 5%;
+    -webkit-filter: brightness(10%);
+            filter: brightness(10%);
   }
   75% {
     -webkit-filter: brightness(15%);
             filter: brightness(15%);
   }
   100% {
-    bottom: -20%;
+    bottom: calc(var(--paraScroll)*1.05);
     -webkit-filter: brightness(100%);
             filter: brightness(100%);
   }
@@ -188,12 +595,12 @@
 
 @-webkit-keyframes bichoHands {
   0% {
-    bottom: -180%;
+    bottom: 0%;
     -webkit-filter: brightness(0%);
             filter: brightness(0%);
   }
-  15% {
-    bottom: -180%;
+  45% {
+    bottom: 0%;
     -webkit-filter: brightness(0%);
             filter: brightness(0%);
   }
@@ -202,7 +609,7 @@
             filter: brightness(15%);
   }
   100% {
-    bottom: -20%;
+    bottom: calc(var(--paraScroll)*0.90);
     -webkit-filter: brightness(100%);
             filter: brightness(100%);
   }
@@ -210,12 +617,12 @@
 
 @keyframes bichoHands {
   0% {
-    bottom: -180%;
+    bottom: 0%;
     -webkit-filter: brightness(0%);
             filter: brightness(0%);
   }
-  15% {
-    bottom: -180%;
+  45% {
+    bottom: 0%;
     -webkit-filter: brightness(0%);
             filter: brightness(0%);
   }
@@ -224,7 +631,7 @@
             filter: brightness(15%);
   }
   100% {
-    bottom: -20%;
+    bottom: calc(var(--paraScroll)*0.90);
     -webkit-filter: brightness(100%);
             filter: brightness(100%);
   }
@@ -238,7 +645,7 @@
     bottom: 0%;
   }
   100% {
-    bottom: -23%;
+    bottom: var(--headScroll);
   }
 }
 
@@ -250,7 +657,7 @@
     bottom: 0%;
   }
   100% {
-    bottom: -23%;
+    bottom: var(--headScroll);
   }
 }
 
@@ -261,5 +668,103 @@
   background: black;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (min-aspect-ratio: 16 / 18) {
+  /* FONDO */
+  .heroBG {
+    height: var(--bgHeight);
+    width: 100%;
+  }
+  .heroBG img {
+    width: 100%;
+    height: auto;
+  }
+  /* FIN FONDO */
+  /* BICHO HEAD */
+  .bichoHead {
+    height: var(--bgHeight);
+    width: 100%;
+  }
+  .bichoHead img {
+    bottom: -55%;
+    width: 70%;
+    height: auto;
+  }
+  /* FIn bICHO HEAD */
+  .bichoHands {
+    height: var(--bgHeight);
+    width: 100%;
+  }
+  .bichoHands img {
+    width: 70%;
+    height: auto;
+    bottom: -65%;
+  }
+  .heroHost img {
+    width: 70%;
+    height: auto;
+  }
+  .logoBig img {
+    width: 40%;
+    height: auto;
+  }
+  .paraHeadBreathe {
+    width: 100%;
+    max-width: 100%;
+    bottom: 0px;
+  }
+  .paraHandsBreathe {
+    width: 100%;
+    max-width: 100%;
+    bottom: 0px;
+  }
+}
+
+@media screen and (max-aspect-ratio: 16 / 18) {
+  /* FONDO */
+  .heroBG {
+    height: 100vh;
+    width: 100vw;
+  }
+  .heroBG img {
+    height: var(--bgHeight);
+    width: auto;
+  }
+  /* FIN FONDO */
+  .bichoHead img {
+    bottom: -calc(0vw);
+    width: 80%;
+    height: auto;
+  }
+  .bichoHands img {
+    bottom: -calc(0vw);
+    width: 80%;
+    height: auto;
+  }
+  .heroHost img {
+    width: 80%;
+    height: auto;
+  }
+  .logoBig img {
+    width: 50%;
+    height: auto;
+  }
+  .paraHeadBreathe {
+    width: 100%;
+    max-width: 100%;
+    bottom: 0px;
+  }
+  .paraHandsBreathe {
+    width: 100%;
+    max-width: 100%;
+    bottom: 0px;
+  }
+}
+
+@media screen and (min-aspect-ratio: 16 / 18) and (max-aspect-ratio: 22 / 18) {
+  .logoBig img {
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

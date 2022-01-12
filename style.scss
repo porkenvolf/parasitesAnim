@@ -3,12 +3,51 @@
     padding: 0;
     
 }
+
+
+@media screen and (min-aspect-ratio:16/18){  //landscape
+    :root{
+        --bgHeight: calc(100vw * 1.125);
+        --bgScroll: calc(100vh - var(--bgHeight));
+        --bgScroll2: min(var(--bgScroll), -1*var(--bgScroll));
+        --headScroll:calc(var(--bgHeight) * (-0.105));
+        --paraScroll: calc(var(--bgHeight) * (0.71));
+        --logoBigScroll: calc(-70%);
+        --paraBreate: 1.5%;
+
+        
+    }
+}
+@media screen and (max-aspect-ratio:16/18){  //portrait
+    :root{
+        --bgHeight: calc(100vh * 1.5);
+        --bgScroll: calc(110vh - var(--bgHeight));
+        --bgScroll2: min(var(--bgScroll), -1*var(--bgScroll));
+        --headScroll:calc(100vw * (-0.12));
+        --paraScroll: calc(100vw * (0.7));
+        --logoBigScroll: -30%;
+        --paraBreate: 10px;
+    }
+    
+}
+@media screen and (min-aspect-ratio:16/18) and (max-aspect-ratio:22/18){
+    :root{
+        --logoBigScroll: calc(100vw * (-0.3));
+    }
+    
+
+}
 :root{
-    --animHeight: calc(100vw * 0.51);
+    --animHeight: 100vh;
+    
 }
 
 
+
+
+
 .heroAnim{
+    
     overflow-y: hidden;
     overflow-x: hidden;
     position: absolute;
@@ -30,20 +69,29 @@
     /* FONDO */
     
     .heroBG{
+        
         position: absolute;
-        height: 200%;
-        width: 100%;
+        
         /* background-image: url("/img/bg.jpg"); */
         animation-name: heroBG;
         animation-duration: 5s;
         animation-fill-mode: forwards;
         z-index: 1;
+        
 
         img{
-            width: 100%;
-            height: auto;
+            position: absolute;
+            
+            //centrar
+            left: 50%;
+            transform: translateX(-50%)
+            
         }
-    } /* FIN FONDO */
+    } 
+    
+    
+    
+    /* FIN FONDO */
 
 
     /* BICHO HEAD */
@@ -56,12 +104,11 @@
         animation-duration: 5s;
         animation-fill-mode: forwards;
         z-index: 2;
+        
 
         img{
             position: absolute;
-            bottom: 0;
-            width: 80%;         
-            height: auto;
+            
 
             //centrar
             left: 50%;
@@ -84,9 +131,8 @@
 
         img{
             position: absolute;
-            bottom: 0;
-            width: 80%;         
-            height: auto;
+            
+           
 
             //centrar
             left: 50%;
@@ -108,55 +154,198 @@
         img{
             position: absolute;
             bottom: 0;
-            width: 80%;         //esta unidad deberia depender de vw, ajustar
-            height: auto;
+            
 
             //centrar
             left: 50%;
             transform: translateX(-50%)
         }
     } /* FIN HOST HEAD */
+    .blackIntro{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background:black;
+        z-index: 998;
+        animation-name: blackIntro;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
 
-    .pause{
+    }
+    .logoBig{
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        animation-name: logoBig;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        
+        z-index: 999;
+        img{
+            position: absolute;
+            
+            //centrar
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            
+            
+            
+        }
+    }
+    .paraHeadBreathe{
+        position: absolute;
+    
+        animation-name: paraHeadBreathe;
+        animation-duration: 5s;
+        animation-delay: 0.7s;
+        animation-iteration-count: infinite;
+
+    }
+    .paraHandsBreathe{
+        
+        position: absolute;
+        animation-name: paraHeadBreathe;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+
+    }
+    .ray1{
+        position: absolute;
+        width: 100%;
+        max-width: 100%;animation-name: ray1;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 1;
+        
+    }
+    .ray1_2{
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        animation-name: ray1_2;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: backwards;
+        z-index: 1;
+        
+    }
+    .ray2{
+        position: absolute;
+        width: 100%;
+        max-width: 100%;animation-name: ray2;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 1;
+        
+    }
+    .ray2_2{
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        animation-name: ray2_2;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: backwards;
+        z-index: 1;
+        
+    }
+    .bright{
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        animation-name: bright;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: backwards;
+        z-index: 1;
+        top: 50%;
+        
+    }
+
+    .paused{
         animation-play-state: paused !important;
         -webkit-animation-play-state: paused !important;
         -moz-animation-play-state: paused !important;
       }
-    .play{
-        animation-play-state: running !important;
-        -webkit-animation-play-state: running !important;
-        -moz-animation-play-state: running !important;
-
-    }
-
-
-
+    
+}
+@keyframes bright{
+    0% {filter: opacity(100%)}
+    50% {filter: opacity(0%)}
+    100% {filter: opacity(100%)}
+    
+}
+@keyframes ray2{
+    0% {right:0%; filter: opacity(80%)}
+    50% {filter: opacity(50%)}
+    100% {right: 100%; filter: opacity(50%)}
+    
+}
+@keyframes ray2_2{
+    0% {right:-100%; filter: opacity(80%)}
+    50% {filter: opacity(50%)}
+    100% {right: 0%; filter: opacity(50%)}
+    
+}
+@keyframes ray1{
+    0% {left:0%; filter: opacity(80%)}
+    50% {filter: opacity(50%)}
+    100% {left: 100%; filter: opacity(50%)}
+    
+}
+@keyframes ray1_2{
+    0% {left:-100%; filter: opacity(80%)}
+    50% {filter: opacity(50%)}
+    100% {left: 0%; filter: opacity(50%)}
+    
+}
+@keyframes paraHeadBreathe {
+    0% {top: var(--paraBreate)}
+    50% {top: calc(var(--paraBreate) * (-1))}
+    100% {top: var(--paraBreate)}
     
     
+}
+@keyframes logoBig {
+    0% {top:0%}
+    30% {top: 0%;}
+    100% {top: var(--logoBigScroll)}
+    
+}
+@keyframes blackIntro{
+    0% {filter: opacity(100%)}
+    30% {filter: opacity(100%)}
+    100% {filter: opacity(0%)}
 
 }
-
-
 @keyframes  heroBG{
-    0% {top:0}
-    100% {top: -90%;}
+    0% {top:0%}
+    100% {top: var(--bgScroll2)}
 }
 @keyframes  bichoHead{
-    0% {bottom:-140%; filter: brightness(0%)}
-    15% {bottom:-140%; filter: brightness(0%)}
+    0% {bottom:5%; filter: brightness(0%)}
+    55% {bottom:5%; filter: brightness(10%)}
     75% { filter: brightness(15%)}
-    100% {bottom: -20%; filter: brightness(100%)}    
+    100% {bottom: calc(var(--paraScroll)*1.05); filter: brightness(100%)}  
 }
 @keyframes  bichoHands{
-    0% {bottom:-180%; filter: brightness(0%);}
-    15% {bottom:-180%; filter: brightness(0%)}
+    0% {bottom:0%; filter: brightness(0%);}
+    45% {bottom:0%; filter: brightness(0%)}
     65% { filter: brightness(15%)}
-    100% {bottom: -20%; filter: brightness(100%);}    
+    100% {bottom: calc(var(--paraScroll)*0.90); filter: brightness(100%);}    
 }
 @keyframes  heroHost{
     0% {bottom:0%}
     15% {bottom:0%}
-    100% {bottom: -23%;}    //esta unidad deberia depender de vw, ajustar
+    100% {bottom: var(--headScroll);}    //esta unidad deberia depender de vw, ajustar
 }
 
 
@@ -169,4 +358,123 @@
     background: black;
     width: 100%;
     height: 100%;
+}
+
+
+
+
+@media screen and (min-aspect-ratio:16/18){ //landscape
+    /* FONDO */
+    .heroBG{
+        height: var(--bgHeight);
+        width: 100%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    } /* FIN FONDO */
+
+    /* BICHO HEAD */
+    .bichoHead{
+        height: var(--bgHeight);
+        width: 100%;
+        img{
+            bottom: -55%;
+            width: 70%;         
+            height: auto;
+        }
+
+    } /* FIn bICHO HEAD */
+    .bichoHands{
+        height: var(--bgHeight);
+        width: 100%;
+        img{
+            width: 70%;         
+            height: auto;
+            bottom: -65%;
+        }
+    }
+    .heroHost{
+        img{
+            width: 70%;         //esta unidad deberia depender de vw, ajustar
+            height: auto;
+        }
+    }
+    .logoBig{
+        img{
+            width: 40%;
+            height: auto;
+        }
+    }
+    .paraHeadBreathe{
+        width: 100%;
+        max-width: 100%;
+        bottom: 0px;
+    }
+    .paraHandsBreathe{
+        width: 100%;
+        max-width: 100%;
+        bottom: 0px;
+    }
+    
+}
+
+@media screen and (max-aspect-ratio:16/18){  //portrait
+    /* FONDO */
+    
+    .heroBG{
+        height: 100vh;
+        width: 100vw;
+        img{
+            height: var(--bgHeight);
+            width: auto;
+        }
+    } /* FIN FONDO */
+    .bichoHead{
+        
+        img{
+            bottom: -calc(100vw * 0);
+            width: 80%;         
+            height: auto;
+        }
+
+    }
+    .bichoHands{
+        img{
+            bottom: -calc(100vw * 0);
+            width: 80%;         //esta unidad deberia depender de vw, ajustar
+            height: auto;
+        }
+    }
+    .heroHost{
+        img{
+            width: 80%;         //esta unidad deberia depender de vw, ajustar
+            height: auto;
+        }
+    }
+    .logoBig{
+        img{
+            width: 50%;
+            height: auto;
+        }
+    }
+    .paraHeadBreathe{
+        width: 100%;
+        max-width: 100%;
+        bottom: 0px;
+    }
+    .paraHandsBreathe{
+        width: 100%;
+        max-width: 100%;
+        bottom: 0px;
+    }
+    
+}
+@media screen and (min-aspect-ratio:16/18) and (max-aspect-ratio:22/18){
+    .logoBig{
+        img{
+            width: 40%;
+        }
+    }
+
 }
