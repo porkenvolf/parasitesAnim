@@ -21,18 +21,19 @@
             
             
             <div id="heroBG" class="heroBG spaused"><img src="img/bg.jpg" alt=""></div>
-            <div class="heroBG"><div class="ray1 "><img src="img/ray.png" alt=""></div></div>
-            <div class="heroBG"><div class="ray1_2"><img src="img/ray.png" alt=""></div></div>
-            <div class="heroBG"><div class="ray2 "><img src="img/ray.png" alt=""></div></div>
-            <div class="heroBG"><div class="ray2_2"><img src="img/ray.png" alt=""></div></div>
-            <div class="heroBG"><div class="bright"><img src="img/bright.png" alt=""></div></div>
+            <div id="ray1cont" class="heroBG"><div id="ray1" class="ray1"><img src="img/ray.png" alt=""></div></div>
+            <div id="ray1_2cont" class="heroBG"><div id="ray1_2" class="ray1_2"><img src="img/ray.png" alt=""></div></div>
+            <div id="ray2cont" class="heroBG"><div id="ray2" class="ray2"><img src="img/ray.png" alt=""></div></div>
+            <div id="ray2_2cont" class="heroBG"><div id="ray2_2" class="ray2_2"><img src="img/ray.png" alt=""></div></div>
             <div id="bichoHands" class="bichoHands dpaused"><div class="paraHandsBreathe"><img src="img/bichoManos.png" alt=""></div></div>
             <div id="bichoHead" class="bichoHead dpaused"><div class="paraHeadBreathe"><img src="img/bichoHead.png" alt=""></div></div>
-            
-            
+            <div id="fog1" class="fog1"><img src="img/fog.png" alt=""></div>
+            <div id="fog2" class="fog2"><img src="img/fog.png" alt=""></div>
+            <!-- <div class="bright"><img src="img/bright.png" alt=""></div> -->
             <div id="heroHost" class="heroHost dpaused"><img src="img/Head.png" alt=""></div>
-            <div class="blackIntro spaused"></div>
-            <div class="logoBig dpaused"><img src="img/logoBig.png" alt=""></div>
+            
+            <div id="blackIntro" class="blackIntro spaused"></div>
+            <div id="logoBig" class="logoBig dpaused"><img src="img/logoBig.png" alt=""></div>
             
 
 
@@ -49,7 +50,7 @@
 
 
         <script src="js/jquery-3.2.1.min.js"></script>
-        <!-- <script>
+        <script>
             // Set the name of the hidden property and the change event for visibility
             var hidden, visibilityChange;
             if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
@@ -76,12 +77,28 @@
                 $('#bichoHands').addClass('paused');
                 $('#bichoHead').addClass('paused');
                 $('#heroHost').addClass('paused');
+                $('#ray1cont').addClass('paused');
+                $('#ray1_2cont').addClass('paused');
+                $('#ray2cont').addClass('paused');
+                $('#ray2_2cont').addClass('paused');
+                $('#blackIntro').addClass('paused');
+                $('#logoBig').addClass('paused');
+                $('#fog1').addClass('paused');
+                $('#fog2').addClass('paused');
                       
             } else if (document[hidden] == false){
                 $('#heroBG').removeClass('paused');
                 $('#bichoHands').removeClass('paused');
                 $('#bichoHead').removeClass('paused');
                 $('#heroHost').removeClass('paused');
+                $('#ray1cont').removeClass('paused');
+                $('#ray1_2cont').removeClass('paused');
+                $('#ray2cont').removeClass('paused');
+                $('#ray2_2cont').removeClass('paused');
+                $('#blackIntro').removeClass('paused');
+                $('#logoBig').removeClass('paused');
+                $('#fog1').removeClass('paused');
+                $('#fog2').removeClass('paused');
                 
             }
 
@@ -96,17 +113,33 @@
                 $('#bichoHands').addClass('paused');
                 $('#bichoHead').addClass('paused');
                 $('#heroHost').addClass('paused');
+                $('#ray1cont').addClass('paused');
+                $('#ray1_2cont').addClass('paused');
+                $('#ray2cont').addClass('paused');
+                $('#ray2_2cont').addClass('paused');
+                $('#blackIntro').addClass('paused');
+                $('#logoBig').addClass('paused');
+                $('#fog1').addClass('paused');
+                $('#fog2').addClass('paused');
                       
             } else if (document[hidden] == false){
                 $('#heroBG').removeClass('paused');
                 $('#bichoHands').removeClass('paused');
                 $('#bichoHead').removeClass('paused');
                 $('#heroHost').removeClass('paused');
+                $('#ray1cont').removeClass('paused');
+                $('#ray1_2cont').removeClass('paused');
+                $('#ray2cont').removeClass('paused');
+                $('#ray2_2cont').removeClass('paused');
+                $('#blackIntro').removeClass('paused');
+                $('#logoBig').removeClass('paused');
+                $('#fog1').removeClass('paused');
+                $('#fog2').removeClass('paused');
                 
             }
             });
 
-        </script> -->
+        </script>
         
 
 

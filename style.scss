@@ -41,11 +41,6 @@
     --animHeight: 100vh;
     
 }
-
-
-
-
-
 .heroAnim{
     
     overflow-y: hidden;
@@ -77,6 +72,26 @@
         animation-duration: 5s;
         animation-fill-mode: forwards;
         z-index: 1;
+        
+
+        img{
+            position: absolute;
+            
+            //centrar
+            left: 50%;
+            transform: translateX(-50%)
+            
+        }
+    } 
+    .bright{
+        
+        position: absolute;
+        animation-name: bright;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: backwards;
+        z-index: 3;
         
 
         img{
@@ -216,7 +231,7 @@
         position: absolute;
         width: 100%;
         max-width: 100%;animation-name: ray1;
-        animation-duration: 1s;
+        animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         z-index: 1;
@@ -227,7 +242,7 @@
         width: 100%;
         max-width: 100%;
         animation-name: ray1_2;
-        animation-duration: 1s;
+        animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         animation-fill-mode: backwards;
@@ -238,7 +253,7 @@
         position: absolute;
         width: 100%;
         max-width: 100%;animation-name: ray2;
-        animation-duration: 1s;
+        animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         z-index: 1;
@@ -249,32 +264,83 @@
         width: 100%;
         max-width: 100%;
         animation-name: ray2_2;
-        animation-duration: 1s;
+        animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         animation-fill-mode: backwards;
         z-index: 1;
         
     }
-    .bright{
+    .fog1{
         position: absolute;
+        top: 0;
+        height: 100vh;
         width: 100%;
         max-width: 100%;
-        animation-name: bright;
-        animation-duration: 1s;
+        animation-name: fog1;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        animation-fill-mode: backwards;
-        z-index: 1;
-        top: 50%;
-        
+        z-index: 3;
+        img{
+            width: 90%;
+            height: auto;
+            position: absolute;
+            bottom: 15%;
+            //centrar
+            left: 50%;
+            
+            transform: translateX(-50%);
+        }
+
     }
+    .fog2{
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        max-width: 100%;
+        animation-name: fog2;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 3;
+
+        img{
+            width: 90%;
+            height: auto;
+            position: absolute;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            bottom: 15%;
+            //centrar
+            left: 50%;
+            
+            transform: translateX(-50%);
+        }
+
+    }
+    
 
     .paused{
         animation-play-state: paused !important;
         -webkit-animation-play-state: paused !important;
         -moz-animation-play-state: paused !important;
       }
+    
+}
+@keyframes fog2 {
+    0% {right: 0%; filter: opacity(0%)}
+    30% {filter: opacity(100%)}
+    100% {right: 70%; filter: opacity(0%)}
+    
+}
+@keyframes fog1 {
+    0% {left: 0%; filter: opacity(0%)}
+    30% {filter: opacity(100%)}
+    100% {left: 70%; filter: opacity(0%)}
     
 }
 @keyframes bright{
@@ -315,12 +381,15 @@
     
 }
 @keyframes logoBig {
-    0% {top:0%}
+
+    0% {top:0%; filter: opacity(0%)}
+    15% {top:0%; filter: opacity(100%)}
     30% {top: 0%;}
     100% {top: var(--logoBigScroll)}
     
 }
 @keyframes blackIntro{
+    
     0% {filter: opacity(100%)}
     30% {filter: opacity(100%)}
     100% {filter: opacity(0%)}
@@ -334,18 +403,18 @@
     0% {bottom:5%; filter: brightness(0%)}
     55% {bottom:5%; filter: brightness(10%)}
     75% { filter: brightness(15%)}
-    100% {bottom: calc(var(--paraScroll)*1.05); filter: brightness(100%)}  
+    100% {bottom: calc(var(--paraScroll)*1.1); filter: brightness(100%)}  
 }
 @keyframes  bichoHands{
     0% {bottom:0%; filter: brightness(0%);}
     45% {bottom:0%; filter: brightness(0%)}
     65% { filter: brightness(15%)}
-    100% {bottom: calc(var(--paraScroll)*0.90); filter: brightness(100%);}    
+    100% {bottom: calc(var(--paraScroll)*0.95); filter: brightness(100%);}    
 }
 @keyframes  heroHost{
-    0% {bottom:0%}
-    15% {bottom:0%}
-    100% {bottom: var(--headScroll);}    //esta unidad deberia depender de vw, ajustar
+    0% {bottom: var(--headScroll);}
+    35% {bottom: var(--headScroll);}
+    100% {bottom: 0}    //esta unidad deberia depender de vw, ajustar
 }
 
 
@@ -373,6 +442,14 @@
             height: auto;
         }
     } /* FIN FONDO */
+    .bright{
+        height: var(--bgHeight);
+        width: 100%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
 
     /* BICHO HEAD */
     .bichoHead{
@@ -396,7 +473,7 @@
     }
     .heroHost{
         img{
-            width: 70%;         //esta unidad deberia depender de vw, ajustar
+            width: 65%;         //esta unidad deberia depender de vw, ajustar
             height: auto;
         }
     }
