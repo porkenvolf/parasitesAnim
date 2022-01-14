@@ -6,6 +6,7 @@
 @media screen and (min-aspect-ratio: 16 / 18) {
   :root {
     --bgHeight: calc(100vw * 1.125);
+    --bgScale: 1.05;
     --bgScroll: calc(100vh - var(--bgHeight));
     --bgScroll2: min(var(--bgScroll), -1*var(--bgScroll));
     --headScroll:calc(var(--bgHeight) * (-0.105));
@@ -18,6 +19,7 @@
 @media screen and (max-aspect-ratio: 16 / 18) {
   :root {
     --bgHeight: calc(100vh * 1.5);
+    --bgScale: 1;
     --bgScroll: calc(110vh - var(--bgHeight));
     --bgScroll2: min(var(--bgScroll), -1*var(--bgScroll));
     --headScroll:calc(100vw * (-0.12));
@@ -29,6 +31,7 @@
 
 @media screen and (min-aspect-ratio: 16 / 18) and (max-aspect-ratio: 22 / 18) {
   :root {
+    --bgScroll: calc(100vh - var(--bgHeight)*1);
     --logoBigScroll: calc(100vw * (-0.3));
   }
 }
@@ -69,6 +72,8 @@
           animation-duration: 5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
   z-index: 1;
 }
 
@@ -79,22 +84,22 @@
           transform: translateX(-50%);
 }
 
-.heroAnim .bright {
+.heroAnim .brightUP {
   position: absolute;
-  -webkit-animation-name: bright;
-          animation-name: bright;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  -webkit-animation-name: heroBG;
+          animation-name: heroBG;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  mix-blend-mode: screen;
+  animation-delay: 1.5s;
   z-index: 3;
 }
 
-.heroAnim .bright img {
+.heroAnim .brightUP img {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -343,6 +348,23 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.heroAnim .brightGlow {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation-name: bright;
+          animation-name: bright;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  z-index: 1;
 }
 
 .heroAnim .paused {
@@ -819,19 +841,19 @@
 @media screen and (min-aspect-ratio: 16 / 18) {
   /* FONDO */
   .heroBG {
-    height: var(--bgHeight);
-    width: 100%;
+    width: 100vw;
+    height: auto;
   }
   .heroBG img {
     width: 100%;
     height: auto;
   }
   /* FIN FONDO */
-  .bright {
-    height: var(--bgHeight);
+  .brightUP {
     width: 100%;
+    height: auto;
   }
-  .bright img {
+  .brightUP img {
     width: 100%;
     height: auto;
   }
@@ -842,7 +864,7 @@
   }
   .bichoHead img {
     bottom: -55%;
-    width: 70%;
+    width: 65%;
     height: auto;
   }
   /* FIn bICHO HEAD */
@@ -851,7 +873,7 @@
     width: 100%;
   }
   .bichoHands img {
-    width: 70%;
+    width: 65%;
     height: auto;
     bottom: -65%;
   }
@@ -882,6 +904,14 @@
     width: 100vw;
   }
   .heroBG img {
+    height: var(--bgHeight);
+    width: auto;
+  }
+  .brightUP {
+    height: 100vh;
+    width: 100vw;
+  }
+  .brightUP img {
     height: var(--bgHeight);
     width: auto;
   }

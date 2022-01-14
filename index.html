@@ -6,10 +6,6 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <link rel="stylesheet" href="style.css">
-
-        
-        
-        
     </head>
 
     <body>
@@ -17,12 +13,7 @@
         
 
 
-
-
-
         <div class="heroAnim">
-            
-            
             <div id="heroBG" class="heroBG spaused"><img src="img/bg.jpg" alt=""></div>
             <div id="ray1cont" class="heroBG"><div id="ray1" class="ray1"><img src="img/ray.png" alt=""></div></div>
             <div id="ray1_2cont" class="heroBG"><div id="ray1_2" class="ray1_2"><img src="img/ray.png" alt=""></div></div>
@@ -32,24 +23,25 @@
             <div id="bichoHead" class="bichoHead dpaused"><div class="paraHeadBreathe"><img src="img/bichoHead.png" alt=""></div></div>
             <div id="fog1" class="fog1"><img src="img/fog.png" alt=""></div>
             <div id="fog2" class="fog2"><img src="img/fog.png" alt=""></div>
-            <!-- <div class="bright"><img src="img/bright.png" alt=""></div> -->
+            <div id="bright" class="brightUP"><div class="brightGlow"><img src="img/bright.png" alt=""></div></div>
             <div id="heroHost" class="heroHost dpaused"><img src="img/Head.png" alt=""></div>
-            
             <div id="blackIntro" class="blackIntro spaused"></div>
             <div id="logoBig" class="logoBig dpaused"><img src="img/logoBig.png" alt=""></div>
             
-
-
-
-
-
-
         </div>
-        <!-- <div class="pageContent">
-            dsadsadsabr
-            <br><br><br><br><br>
-            dsadsadsa
-        </div> -->
+        
+        
+        <div class="pageContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio ut enim blandit volutpat maecenas. Ultricies integer quis auctor elit sed. Augue lacus viverra vitae congue eu consequat ac felis. Amet consectetur adipiscing elit ut aliquam purus sit amet. Est placerat in egestas erat imperdiet sed euismod nisi porta. Commodo odio aenean sed adipiscing diam. Tincidunt augue interdum velit euismod in pellentesque massa placerat. Cras fermentum odio eu feugiat pretium nibh ipsum. Semper eget duis at tellus. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit.
+
+            Neque sodales ut etiam sit amet nisl purus in. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Duis ut diam quam nulla porttitor. Diam in arcu cursus euismod quis viverra. Risus nec feugiat in fermentum posuere urna nec. Pellentesque nec nam aliquam sem et tortor consequat id. Vitae et leo duis ut diam quam nulla porttitor massa. Duis at consectetur lorem donec massa sapien faucibus et molestie. Justo donec enim diam vulputate ut pharetra. Sit amet risus nullam eget. Nam at lectus urna duis convallis convallis tellus. Odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Quam vulputate dignissim suspendisse in est.
+            
+            Ut lectus arcu bibendum at varius. Pulvinar neque laoreet suspendisse interdum. Urna duis convallis convallis tellus id. Volutpat odio facilisis mauris sit amet massa vitae. Ac orci phasellus egestas tellus rutrum. Commodo elit at imperdiet dui accumsan sit amet nulla. Ipsum suspendisse ultrices gravida dictum fusce ut. Vitae et leo duis ut. Risus nec feugiat in fermentum posuere urna nec tincidunt. Iaculis eu non diam phasellus vestibulum lorem sed risus. Leo vel fringilla est ullamcorper.
+            
+            Eu nisl nunc mi ipsum faucibus. A lacus vestibulum sed arcu non odio. Scelerisque fermentum dui faucibus in ornare quam. Sed pulvinar proin gravida hendrerit. Lacus laoreet non curabitur gravida arcu ac tortor dignissim. Scelerisque in dictum non consectetur. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie nunc non. Sit amet tellus cras adipiscing enim eu turpis egestas pretium. Lacus sed turpis tincidunt id aliquet risus feugiat in. Dui id ornare arcu odio ut sem nulla pharetra diam. Volutpat diam ut venenatis tellus in metus vulputate eu. Et malesuada fames ac turpis egestas maecenas pharetra. Cursus metus aliquam eleifend mi in nulla posuere. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean.
+            
+            Proin libero nunc consequat interdum varius sit. Iaculis eu non diam phasellus. Amet consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Viverra vitae congue eu consequat ac felis donec et. Sit amet mauris commodo quis imperdiet massa. Nullam vehicula ipsum a arcu cursus vitae congue. In eu mi bibendum neque egestas congue quisque egestas diam. In vitae turpis massa sed elementum tempus egestas sed sed. Nec tincidunt praesent semper feugiat nibh sed. Varius sit amet mattis vulputate enim nulla aliquet. Purus gravida quis blandit turpis cursus in hac habitasse. Euismod in pellentesque massa placerat duis ultricies lacus sed turpis.
+            
+        </div>
 
 
         <script src="js/jquery-3.2.1.min.js"></script>
@@ -88,6 +80,7 @@
                 $('#logoBig').addClass('paused');
                 $('#fog1').addClass('paused');
                 $('#fog2').addClass('paused');
+                $('#bright').addClass('paused');
                       
             } else if (document[hidden] == false){
                 $('#heroBG').removeClass('paused');
@@ -102,6 +95,7 @@
                 $('#logoBig').removeClass('paused');
                 $('#fog1').removeClass('paused');
                 $('#fog2').removeClass('paused');
+                $('#bright').removeClass('paused');
                 
             }
 
@@ -124,6 +118,7 @@
                 $('#logoBig').addClass('paused');
                 $('#fog1').addClass('paused');
                 $('#fog2').addClass('paused');
+                $('#bright').addClass('paused');
                       
             } else if (document[hidden] == false){
                 $('#heroBG').removeClass('paused');
@@ -138,16 +133,11 @@
                 $('#logoBig').removeClass('paused');
                 $('#fog1').removeClass('paused');
                 $('#fog2').removeClass('paused');
+                $('#bright').removeClass('paused');
                 
             }
             });
 
         </script>
-        
-
-
-
-
     </body>
-
 </html>

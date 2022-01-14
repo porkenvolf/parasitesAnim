@@ -8,6 +8,7 @@
 @media screen and (min-aspect-ratio:16/18){  //landscape
     :root{
         --bgHeight: calc(100vw * 1.125);
+        --bgScale: 1.05;
         --bgScroll: calc(100vh - var(--bgHeight));
         --bgScroll2: min(var(--bgScroll), -1*var(--bgScroll));
         --headScroll:calc(var(--bgHeight) * (-0.105));
@@ -21,6 +22,7 @@
 @media screen and (max-aspect-ratio:16/18){  //portrait
     :root{
         --bgHeight: calc(100vh * 1.5);
+        --bgScale: 1;
         --bgScroll: calc(110vh - var(--bgHeight));
         --bgScroll2: min(var(--bgScroll), -1*var(--bgScroll));
         --headScroll:calc(100vw * (-0.12));
@@ -32,6 +34,7 @@
 }
 @media screen and (min-aspect-ratio:16/18) and (max-aspect-ratio:22/18){
     :root{
+        --bgScroll: calc(100vh - var(--bgHeight)*1);
         --logoBigScroll: calc(100vw * (-0.3));
     }
     
@@ -71,10 +74,12 @@
         animation-name: heroBG;
         animation-duration: 5s;
         animation-fill-mode: forwards;
+        animation-delay: 1.5s;
         z-index: 1;
         
 
         img{
+            
             position: absolute;
             
             //centrar
@@ -83,20 +88,22 @@
             
         }
     } 
-    .bright{
+    .brightUP{
         
         position: absolute;
-        animation-name: bright;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-fill-mode: backwards;
+        animation-name: heroBG;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s;
+        
+        mix-blend-mode: screen;
+        
+        animation-delay: 1.5s;
         z-index: 3;
         
 
         img{
             position: absolute;
-            
             //centrar
             left: 50%;
             transform: translateX(-50%)
@@ -230,7 +237,8 @@
     .ray1{
         position: absolute;
         width: 100%;
-        max-width: 100%;animation-name: ray1;
+        max-width: 100%;
+        animation-name: ray1;
         animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
@@ -321,6 +329,18 @@
         }
 
     }
+    .brightGlow{
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        animation-name: bright;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: backwards;
+        z-index: 1;
+
+    }
     
 
     .paused{
@@ -348,6 +368,7 @@
     100% {filter: opacity(100%)}
     
 }
+
 @keyframes ray2{
     0% {right:0%; filter: opacity(80%)}
     50% {filter: opacity(50%)}
@@ -434,16 +455,17 @@
 @media screen and (min-aspect-ratio:16/18){ //landscape
     /* FONDO */
     .heroBG{
-        height: var(--bgHeight);
-        width: 100%;
+        width: 100vw;
+        height: auto;
         img{
             width: 100%;
             height: auto;
         }
     } /* FIN FONDO */
-    .bright{
-        height: var(--bgHeight);
+    .brightUP{
+        
         width: 100%;
+        height: auto;
         img{
             width: 100%;
             height: auto;
@@ -456,7 +478,7 @@
         width: 100%;
         img{
             bottom: -55%;
-            width: 70%;         
+            width: 65%;         
             height: auto;
         }
 
@@ -465,7 +487,7 @@
         height: var(--bgHeight);
         width: 100%;
         img{
-            width: 70%;         
+            width: 65%;         
             height: auto;
             bottom: -65%;
         }
@@ -505,7 +527,17 @@
             height: var(--bgHeight);
             width: auto;
         }
-    } /* FIN FONDO */
+    }
+    .brightUP{
+        height: 100vh;
+        width: 100vw;
+        img{
+            height: var(--bgHeight);
+            width: auto;
+        }
+
+    }
+    /* FIN FONDO */
     .bichoHead{
         
         img{
