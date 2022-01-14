@@ -360,11 +360,20 @@
           animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   z-index: 1;
+}
+
+.heroAnim .dark {
+  -webkit-animation-name: dark;
+          animation-name: dark;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 .heroAnim .paused {
@@ -445,14 +454,20 @@
   0% {
     -webkit-filter: opacity(100%);
             filter: opacity(100%);
+    -webkit-filter: brightness(150%);
+            filter: brightness(150%);
   }
   50% {
     -webkit-filter: opacity(0%);
             filter: opacity(0%);
+    -webkit-filter: brightness(0%);
+            filter: brightness(0%);
   }
   100% {
     -webkit-filter: opacity(100%);
             filter: opacity(100%);
+    -webkit-filter: brightness(150%);
+            filter: brightness(150%);
   }
 }
 
@@ -460,14 +475,50 @@
   0% {
     -webkit-filter: opacity(100%);
             filter: opacity(100%);
+    -webkit-filter: brightness(150%);
+            filter: brightness(150%);
   }
   50% {
     -webkit-filter: opacity(0%);
             filter: opacity(0%);
+    -webkit-filter: brightness(0%);
+            filter: brightness(0%);
   }
   100% {
     -webkit-filter: opacity(100%);
             filter: opacity(100%);
+    -webkit-filter: brightness(150%);
+            filter: brightness(150%);
+  }
+}
+
+@-webkit-keyframes dark {
+  0% {
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+  }
+  50% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  100% {
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+  }
+}
+
+@keyframes dark {
+  0% {
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+  }
+  50% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  100% {
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%);
   }
 }
 

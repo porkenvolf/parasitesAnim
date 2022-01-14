@@ -336,10 +336,17 @@
         animation-name: bright;
         animation-duration: 3s;
         animation-iteration-count: infinite;
-        animation-timing-function: linear;
         animation-fill-mode: backwards;
         z-index: 1;
 
+    }
+    .dark{
+        
+        animation-name: dark;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: backwards;
+        
     }
     
 
@@ -363,9 +370,15 @@
     
 }
 @keyframes bright{
-    0% {filter: opacity(100%)}
-    50% {filter: opacity(0%)}
-    100% {filter: opacity(100%)}
+    0% {filter: opacity(100%); filter: brightness(150%)}
+    50% {filter: opacity(0%); filter: brightness(0%)}
+    100% {filter: opacity(100%); filter: brightness(150%)}
+    
+}
+@keyframes dark{
+    0% {filter: brightness(70%)}
+    50% {filter: brightness(100%)}
+    100% {filter: brightness(70%)}
     
 }
 
